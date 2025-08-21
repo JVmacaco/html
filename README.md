@@ -269,5 +269,3 @@
 </body>
 </html>
 ```
-
-Quer que eu separe o CSS em um arquivo externo (`style.css`) pra deixar o HTML mais limpo e organizado também?
