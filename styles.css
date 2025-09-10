@@ -1,0 +1,131 @@
+/* ===== Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* ===== Base ===== */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f0f4f8;
+    color: #0f172a;
+  }
+  
+  /* ===== Header ===== */
+  header {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+  }
+  header h1 {
+    font-size: 1.8rem;
+    position: relative;
+  }
+  /* decorativo com ::before */
+  header h1::before {
+    content: "‣";
+    margin-right: 10px;
+    color: #007bff;
+  }
+  
+  /* ===== Seção de Perfil ===== */
+  .profile {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  .profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  .profile-info h2 {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+  }
+  .profile-info p {
+    color: #6b7280;
+  }
+  
+  /* ===== Painel de Informações ===== */
+  .info-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+  .info-panel h3 {
+    margin-bottom: 8px;
+  }
+  .info-panel div:nth-child(even) {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  /* ===== Footer ===== */
+  footer {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #333;
+  }
+  .action-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: transform 0.2s ease-in-out;
+  }
+  /* ::after decorativo */
+  .action-btn::after {
+    content: " ➜";
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-left: 5px;
+  }
+  /* hover */
+  .action-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  /* ===== Responsividade (Mobile-First) ===== */
+  @media (max-width: 600px) {
+    /* perfil em coluna */
+    .profile {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .profile-img {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+    /* painel em 1 coluna */
+    .info-panel {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    /* tablets e desktops */
+    .profile {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .info-panel {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+  }
+  
